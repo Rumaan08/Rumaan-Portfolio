@@ -225,8 +225,7 @@ header .navbar ul li a:hover{
     background: var(--yellow);
     border-radius: 3px;
     position: relative;
-    animation: fillBars 0.4s ease-in-out forwards;
-    opacity: 0;
+    animation: fillBars 0.4s 1;
 }
 .skill-per::before{
     content: attr(per);
@@ -235,7 +234,6 @@ header .navbar ul li a:hover{
     background: #eee;
     border-radius: 4px;
     font-size: 10px;
-    top:-35px;
     top:-35px;
     right: 0;
     transform: translateX(50%);
@@ -253,12 +251,11 @@ header .navbar ul li a:hover{
     
 }
 @keyframes fillBars{
-    0%{
+    from{
         width:0;
-        opacity: 0;
     }
-    100%{
-        opacity: 1;
+    to{
+        width:100%
     }
 }
 .contact .row{
